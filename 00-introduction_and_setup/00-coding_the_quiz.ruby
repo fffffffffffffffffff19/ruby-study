@@ -1,6 +1,6 @@
 # This code are writher using repl.it
 # Basically, the instructor was explaining the concept of array indexing,
-# using the quiz fromm the previous lesson as a base.
+# using the quiz from the previous lesson as a base.
 address = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 p address
