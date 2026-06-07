@@ -54,3 +54,29 @@ build-iPhoneSimulator/
 
 # Used by RuboCop. Remote config files pulled in from inherit_from directive.
 # .rubocop-https?--*
+
+# Ignore all environment files.
+projects/rails-app/.env*
+
+# Ignore all logfiles and tempfiles.
+projects/rails-app/log/*
+projects/rails-app/tmp/*
+!/projects/rails-app/log/.keep
+!/projects/rails-app/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+projects/rails-app/tmp/pids/*
+!/projects/rails-app/tmp/pids/
+!/projects/rails-app/tmp/pids/.keep
+
+# Ignore storage (uploaded files in development and any SQLite databases).
+projects/rails-app/storage/*
+!/projects/rails-app/storage/.keep
+projects/rails-app/tmp/storage/*
+!/projects/rails-app/tmp/storage/
+!/projects/rails-app/tmp/storage/.keep
+
+projects/rails-app/public/assets
+
+# Ignore key files for decrypting credentials and more.
+projects/rails-app/config/*.key
