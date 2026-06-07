@@ -1,0 +1,10 @@
+Installing Rails
+A "gem" in Ruby is a self-contained package of a library or Ruby program. We can use Ruby's gem command to install the latest version of Rails and its dependencies from RubyGems.org.
+
+Run the following command to install the latest Rails and make it available in your terminal:
+
+$ gem install rails
+
+To verify that Rails is installed correctly, run the following and you should see a version number printed out:
+
+$ rails --version
