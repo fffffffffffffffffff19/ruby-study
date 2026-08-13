@@ -12,7 +12,7 @@ end
 # variant
 if condition
   # execute logic
-elsif #different condition
+elsif different_condition
   # execute logic 2
 else 
   # execute logic 3
