@@ -1121,3 +1121,958 @@ Processing by ArticlesController#show as HTML
 Completed 200 OK in 36ms (Views: 16.0ms | ActiveRecord: 1.4ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /* loading for pp */ LIMIT 11 /*application='Deveras'*/[0m
+Started GET "/articles/2" for 127.0.0.1 at 2026-06-25 10:26:11 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Deveras'*/[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:63:in 'ArticlesController#set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 5.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045febaa18>)
+Caused by: NoMethodError (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045febaa18>)
+
+Information for: ActionView::Template::Error (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045febaa18>):
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this article", edit_article_path(@article) %> |
+    7:   <%= link_to "Back to articles", articles_path %>
+    8: 
+    9:   <%= button_to "Destroy this article", @article, method: :delete %>
+   10: </div>
+  
+app/views/articles/show.html.erb:7
+
+Information for cause: NoMethodError (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045febaa18>):
+  
+app/views/articles/show.html.erb:7
+Started GET "/articles" for 127.0.0.1 at 2026-06-25 10:26:15 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles"):
+  
+Started GET "/articles/1" for 127.0.0.1 at 2026-06-25 10:26:21 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:63:in 'ArticlesController#set_article'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'="1"):
+  
+app/controllers/articles_controller.rb:63:in 'ArticlesController#set_article'
+Started GET "/articles/2" for 127.0.0.1 at 2026-06-25 10:26:29 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:63:in 'ArticlesController#set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045febaa18>)
+Caused by: NoMethodError (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045febaa18>)
+
+Information for: ActionView::Template::Error (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045febaa18>):
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this article", edit_article_path(@article) %> |
+    7:   <%= link_to "Back to articles", articles_path %>
+    8: 
+    9:   <%= button_to "Destroy this article", @article, method: :delete %>
+   10: </div>
+  
+app/views/articles/show.html.erb:7
+
+Information for cause: NoMethodError (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045febaa18>):
+  
+app/views/articles/show.html.erb:7
+Started GET "/articles" for 127.0.0.1 at 2026-06-25 10:27:31 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/articles"):
+  
+Started GET "/articles/2" for 127.0.0.1 at 2026-06-25 10:27:50 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:63:in 'ArticlesController#set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045febaa18>)
+Caused by: NoMethodError (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045febaa18>)
+
+Information for: ActionView::Template::Error (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045febaa18>):
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this article", edit_article_path(@article) %> |
+    7:   <%= link_to "Back to articles", articles_path %>
+    8: 
+    9:   <%= button_to "Destroy this article", @article, method: :delete %>
+   10: </div>
+  
+app/views/articles/show.html.erb:7
+
+Information for cause: NoMethodError (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045febaa18>):
+  
+app/views/articles/show.html.erb:7
+Started GET "/articles/5" for 127.0.0.1 at 2026-06-25 10:28:08 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "5"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 5 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:63:in 'ArticlesController#set_article'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'="5"):
+  
+app/controllers/articles_controller.rb:63:in 'ArticlesController#set_article'
+Started GET "/articles/2" for 127.0.0.1 at 2026-06-25 10:30:37 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:63:in 'ArticlesController#set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045febaa18>)
+Caused by: NoMethodError (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045febaa18>)
+
+Information for: ActionView::Template::Error (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045febaa18>):
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this article", edit_article_path(@article) %> |
+    7:   <%= link_to "Back to articles", articles_path %>
+    8: 
+    9:   <%= button_to "Destroy this article", @article, method: :delete %>
+   10: </div>
+  
+app/views/articles/show.html.erb:7
+
+Information for cause: NoMethodError (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045febaa18>):
+  
+app/views/articles/show.html.erb:7
+Started GET "/articles/2" for 127.0.0.1 at 2026-06-25 10:33:35 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:63:in 'ArticlesController#set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | GC: 1.1ms)
+Completed 200 OK in 19ms (Views: 10.1ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 3.4ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2026-06-25 10:37:35 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11:in 'ArticlesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.0ms (2 queries, 1 cached) | GC: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045d4593a0>)
+Caused by: NoMethodError (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045d4593a0>)
+
+Information for: ActionView::Template::Error (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045d4593a0>):
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this article", edit_article_path(@article) %> |
+    7:   <%= link_to "Back to articles", articles_path %>
+    8: 
+    9:   <%= button_to "Destroy this article", @article, method: :delete %>
+   10: </div>
+  
+app/views/articles/show.html.erb:7
+
+Information for cause: NoMethodError (undefined method 'edit_article_path' for an instance of #<Class:0x00007f045d4593a0>):
+  
+app/views/articles/show.html.erb:7
+Started GET "/articles/2" for 127.0.0.1 at 2026-06-25 10:39:19 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11:in 'ArticlesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 3.7ms | ActiveRecord: 0.8ms (2 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2026-06-25 15:49:20 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Deveras'*/[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /*action='index',application='Deveras',controller='articles'*/[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/_article.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered articles/index.html.erb within layouts/application (Duration: 18.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | GC: 0.0ms)
+Completed 200 OK in 49ms (Views: 29.8ms | ActiveRecord: 2.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2026-06-25 15:49:22 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /*action='index',application='Deveras',controller='articles'*/[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/_article.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2026-06-25 15:49:23 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11:in 'ArticlesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 2.1ms | ActiveRecord: 0.1ms (2 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2026-06-25 15:49:39 -0300
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 10.3ms | GC: 0.0ms)
+  Rendered articles/new.html.erb within layouts/application (Duration: 10.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2026-06-25 15:49:39 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11:in 'ArticlesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.1ms (2 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2026-06-25 15:49:43 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11:in 'ArticlesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.1ms (2 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-06-25 15:53:49 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/hello" for 127.0.0.1 at 2026-06-25 15:53:55 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/hello"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2026-06-25 15:53:55 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 127.0.0.1 at 2026-06-25 15:54:07 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/1" for 127.0.0.1 at 2026-06-25 16:08:28 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Deveras'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/1"):
+  
+Started GET "/2" for 127.0.0.1 at 2026-06-25 16:08:30 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/2"):
+  
+Started GET "/articles/1" for 127.0.0.1 at 2026-06-25 16:08:37 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+Completed 404 Not Found in 23ms (ActiveRecord: 1.9ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'="1"):
+  
+app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+Started GET "/articles/2" for 127.0.0.1 at 2026-06-25 16:08:39 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11:in 'ArticlesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | GC: 1.3ms)
+Completed 200 OK in 22ms (Views: 16.2ms | ActiveRecord: 0.1ms (2 queries, 1 cached) | GC: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-06-25 16:48:29 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Deveras'*/[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | GC: 0.0ms)
+Completed 200 OK in 29ms (Views: 24.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2026-06-25 16:48:37 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /*action='index',application='Deveras',controller='articles'*/[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/_article.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered articles/index.html.erb within layouts/application (Duration: 9.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 8.6ms | ActiveRecord: 1.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2026-06-25 16:48:39 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11:in 'ArticlesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 0.1ms (2 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2026-06-25 16:50:18 -0300
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 10.4ms | GC: 0.0ms)
+  Rendered articles/new.html.erb within layouts/application (Duration: 11.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2026-06-25 16:50:35 -0300
+Processing by ArticlesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "article" => {"title" => "Gabe e muito linda", "description" => "ksadjfioasdjfojasidfjoisadjfoajsdifoaifjiadjsf"}, "commit" => "Create Article"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:28:in 'block in ArticlesController#create'
+  [1m[36mArticle Create (1.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "description", "created_at", "updated_at") VALUES ('Gabe e muito linda', 'ksadjfioasdjfojasidfjoisadjfoajsdifoaifjiadjsf', '2026-06-25 19:50:35.078511', '2026-06-25 19:50:35.078511') RETURNING "id" /*action='create',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:28:in 'block in ArticlesController#create'
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:28:in 'block in ArticlesController#create'
+Redirected to http://127.0.0.1:3000/articles/3
+↳ app/controllers/articles_controller.rb:29:in 'block (2 levels) in ArticlesController#create'
+Completed 302 Found in 16ms (ActiveRecord: 11.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2026-06-25 16:50:35 -0300
+Processing by ArticlesController#show as TURBO_STREAM
+  Parameters: {"id" => "3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 3 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 3 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11:in 'ArticlesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.1ms (2 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/3/edit" for 127.0.0.1 at 2026-06-25 16:50:37 -0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 3 LIMIT 1 /*action='edit',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2026-06-25 16:50:38 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /*action='index',application='Deveras',controller='articles'*/[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/_article.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2026-06-25 16:50:48 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artigles" for ::1 at 2026-06-25 16:50:55 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/artigles"):
+  
+Started GET "/favicon.ico" for ::1 at 2026-06-25 16:50:55 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for ::1 at 2026-06-25 16:51:03 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2026-06-25 16:51:12 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /*action='index',application='Deveras',controller='articles'*/[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/_article.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/3" for ::1 at 2026-06-25 16:51:15 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 3 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 3 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11:in 'ArticlesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.1ms (2 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2026-06-25 16:51:18 -0300
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.2ms | GC: 0.1ms)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.5ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/articles/2" for ::1 at 2026-06-25 16:51:19 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11:in 'ArticlesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.1ms (2 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/2" for ::1 at 2026-06-25 16:51:20 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11:in 'ArticlesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.1ms (2 queries, 1 cached) | GC: 0.1ms)
+
+
+Started GET "/articles/2/edit" for ::1 at 2026-06-25 16:51:24 -0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='edit',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/2/edit" for ::1 at 2026-06-25 16:51:25 -0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='edit',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/articles/2" for ::1 at 2026-06-25 16:51:26 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11:in 'ArticlesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.1ms (2 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/2" for ::1 at 2026-06-25 16:51:27 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11:in 'ArticlesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.1ms (2 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2026-06-25 16:51:29 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /*action='index',application='Deveras',controller='articles'*/[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/_article.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2026-06-25 16:51:29 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /*action='index',application='Deveras',controller='articles'*/[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/_article.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/articles/2" for ::1 at 2026-06-25 16:51:30 -0300
+Processing by ArticlesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "id" => "2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='destroy',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:53:in 'ArticlesController#destroy'
+  [1m[36mArticle Destroy (0.7ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = 2 /*action='destroy',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:53:in 'ArticlesController#destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:53:in 'ArticlesController#destroy'
+Redirected to http://localhost:3000/articles
+↳ app/controllers/articles_controller.rb:56:in 'block (2 levels) in ArticlesController#destroy'
+Completed 303 See Other in 5ms (ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2026-06-25 16:51:30 -0300
+Processing by ArticlesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /*action='index',application='Deveras',controller='articles'*/[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/_article.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2026-06-25 16:51:31 -0300
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2026-06-25 16:51:32 -0300
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered articles/new.html.erb within layouts/application (Duration: 2.1ms | GC: 0.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.8ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/articles/3" for ::1 at 2026-06-25 16:51:33 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 3 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 3 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11:in 'ArticlesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms (2 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2026-06-25 16:51:34 -0300
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2026-06-25 16:51:35 -0300
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.9ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.6ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/articles/2" for ::1 at 2026-06-25 16:51:36 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'="2"):
+  
+app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+Started GET "/articles" for ::1 at 2026-06-25 16:51:39 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /*action='index',application='Deveras',controller='articles'*/[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/_article.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/3" for ::1 at 2026-06-25 16:51:48 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 3 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 3 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11:in 'ArticlesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.1ms (2 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2026-06-25 16:51:50 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /*action='index',application='Deveras',controller='articles'*/[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/_article.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/3" for ::1 at 2026-06-25 16:51:52 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 3 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 3 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11:in 'ArticlesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.1ms (2 queries, 1 cached) | GC: 1.3ms)
+
+
+Started GET "/articles" for ::1 at 2026-06-25 21:13:15 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Deveras'*/[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /*action='index',application='Deveras',controller='articles'*/[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/_article.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered articles/index.html.erb within layouts/application (Duration: 19.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | GC: 0.0ms)
+Completed 200 OK in 52ms (Views: 30.7ms | ActiveRecord: 2.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/" for ::1 at 2026-06-25 21:13:26 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /*action='index',application='Deveras',controller='articles'*/[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/_article.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/1" for ::1 at 2026-06-25 21:13:29 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'="1"):
+  
+app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+Started GET "/favicon.ico" for ::1 at 2026-06-25 21:13:30 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/articles/1" for ::1 at 2026-06-25 21:13:52 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'="1"):
+  
+app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+Started GET "/articles/2" for ::1 at 2026-06-25 21:13:56 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 2 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'="2"):
+  
+app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+Started GET "/articles/3" for ::1 at 2026-06-25 21:13:58 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 3 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 3 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11:in 'ArticlesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 0.1ms (2 queries, 1 cached) | GC: 0.0ms)
+
+
+Started DELETE "/articles/3" for ::1 at 2026-06-25 21:14:01 -0300
+Processing by ArticlesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "id" => "3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 3 LIMIT 1 /*action='destroy',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:53:in 'ArticlesController#destroy'
+  [1m[36mArticle Destroy (0.9ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = 3 /*action='destroy',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:53:in 'ArticlesController#destroy'
+  [1m[36mTRANSACTION (13.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:53:in 'ArticlesController#destroy'
+Redirected to http://localhost:3000/articles
+↳ app/controllers/articles_controller.rb:56:in 'block (2 levels) in ArticlesController#destroy'
+Completed 303 See Other in 18ms (ActiveRecord: 14.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2026-06-25 21:14:01 -0300
+Processing by ArticlesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /*action='index',application='Deveras',controller='articles'*/[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2026-06-25 21:14:02 -0300
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 4.0ms | GC: 0.0ms)
+  Rendered articles/new.html.erb within layouts/application (Duration: 4.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2026-06-25 21:14:04 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /*action='index',application='Deveras',controller='articles'*/[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2026-06-25 21:14:05 -0300
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2026-06-25 21:14:11 -0300
+Processing by ArticlesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "article" => {"title" => "aaaaaa", "description" => "ewwwwwwwwwwwwwwwwwwwwwwwwwww"}, "commit" => "Create Article"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:28:in 'block in ArticlesController#create'
+  [1m[36mArticle Create (1.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "description", "created_at", "updated_at") VALUES ('aaaaaa', 'ewwwwwwwwwwwwwwwwwwwwwwwwwww', '2026-06-26 00:14:11.713401', '2026-06-26 00:14:11.713401') RETURNING "id" /*action='create',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:28:in 'block in ArticlesController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:28:in 'block in ArticlesController#create'
+Redirected to http://localhost:3000/articles/4
+↳ app/controllers/articles_controller.rb:29:in 'block (2 levels) in ArticlesController#create'
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/4" for ::1 at 2026-06-25 21:14:11 -0300
+Processing by ArticlesController#show as TURBO_STREAM
+  Parameters: {"id" => "4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 4 LIMIT 1 /*action='show',application='Deveras',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:64:in 'ArticlesController#set_article'
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 4 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:11:in 'ArticlesController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.1ms (2 queries, 1 cached) | GC: 0.0ms)
+
+
